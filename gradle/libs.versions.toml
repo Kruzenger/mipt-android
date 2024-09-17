@@ -1,0 +1,63 @@
+[versions]
+activityCompose = "1.9.2"
+agp = "8.5.2"
+coilCompose = "2.4.0"
+composeBom = "2024.09.01"
+converterGson = "2.0.0-beta1"
+coreKtxVersion = "1.12.0"
+kotlin = "1.9.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+kotlinxSerializationJson = "1.6.0"
+kotlinxSerializationJsonVersion = "1.6.3"
+lifecycleViewmodelCompose = "2.6.2"
+material = "1.12.0"
+constraintlayout = "2.1.4"
+lifecycleLivedataKtx = "2.8.5"
+lifecycleViewmodelKtx = "2.8.5"
+navigationFragmentKtx = "2.8.0"
+navigationUiKtx = "2.8.0"
+okhttp = "2.4.0"
+retrofit = "2.9.0"
+retrofit2KotlinxSerializationConverter = "1.0.0"
+retrofitVersion = "2.0.0-beta1"
+firebaseFirestoreKtx = "25.1.0"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx-v1120 = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-viewmodel-compose-v262 = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+androidx-material3 = { module = "androidx.compose.material3:material3" }
+androidx-ui = { module = "androidx.compose.ui:ui" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+converter-gson = { module = "com.squareup.retrofit:converter-gson", version.ref = "converterGson" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+kotlinx-serialization-json-v163 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJsonVersion" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+okhttp = { module = "com.squareup.okhttp:okhttp", version.ref = "okhttp" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit2-kotlinx-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
+squareup-retrofit = { module = "com.squareup.retrofit:retrofit", version.ref = "retrofitVersion" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
