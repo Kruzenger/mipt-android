@@ -6,7 +6,10 @@ import com.example.myapplication.data.MarsPhotosRepository
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.databinding.ObservableField
 import androidx.lifecycle.viewModelScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.common.data.DataBufferObserver.Observable
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import java.io.IOException
@@ -21,7 +24,7 @@ class DashboardViewModel(private val marsPhotosRepository: MarsPhotosRepository)
     var marsUiState: MarsUiState by mutableStateOf(MarsUiState.Loading)
         private set
 
-    init {
+    fun startDownloading(){
         getMarsPhotos()
     }
 

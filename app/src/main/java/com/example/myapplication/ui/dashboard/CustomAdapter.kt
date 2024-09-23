@@ -14,8 +14,9 @@ import com.example.myapplication.R
 import com.example.myapplication.model.MarsPhoto
 import java.util.concurrent.Executors
 
-class CustomAdapter(private val dataSet: List<MarsPhoto>) :
+class CustomAdapter() :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+        lateinit var dataSet: List<MarsPhoto>
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imageView: ImageView

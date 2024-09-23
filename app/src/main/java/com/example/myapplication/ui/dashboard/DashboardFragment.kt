@@ -1,5 +1,7 @@
 package com.example.myapplication.ui.dashboard
 
+import android.app.appsearch.observer.ObserverCallback
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
@@ -15,11 +17,13 @@ import com.example.myapplication.MarsPhotosApplication
 import com.example.myapplication.databinding.FragmentDashboardBinding
 import java.net.HttpURLConnection
 import java.net.URL
+import java.util.Observable
 
 
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
+    val customAdapter = CustomAdapter()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -37,7 +41,8 @@ class DashboardFragment : Fragment() {
         val marsPhotosRepository = application.container.marsPhotosRepository
 
         val dashboardViewModel = DashboardViewModel(marsPhotosRepository = marsPhotosRepository)
-        processData(dashboardViewModel.marsUiState)
+        dashboardViewModel.startDownloading()
+        processData(marsUiState = dashboardViewModel.marsUiState)
 
         return root
     }
@@ -52,11 +57,10 @@ class DashboardFragment : Fragment() {
         when (marsUiState) {
             is MarsUiState.Loading -> {}
             is MarsUiState.Success -> {
-                val customAdapter = CustomAdapter(marsUiState.photos)
                 recyclerView.layoutManager = LinearLayoutManager(context);
                 recyclerView.adapter = customAdapter
+                customAdapter.dataSet = marsUiState.photos
             }
-
             is MarsUiState.Error -> {}
         }
     }
